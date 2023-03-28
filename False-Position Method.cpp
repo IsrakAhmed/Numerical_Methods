@@ -11,8 +11,8 @@
                                     else
                                         a = c
 
-        Repeat this process until there is any same value of c in the iteration.
-        That will be the root.
+        Repeat this process until f(c) becomes zero.
+        Then c will be the root.
 
         Setting values for a and b:
 
