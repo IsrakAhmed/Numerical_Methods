@@ -45,22 +45,22 @@ using namespace std;
    z = (25-2x+3y)/20
 */
 /* Defining function */
-#define f1(x,y,z)  (17-y+2*z)/20
-#define f2(x,y,z)  (-18-3*x+z)/20
-#define f3(x,y,z)  (25-2*x+3*y)/20
+#define f1(x,y,z)  (17 - y + 2 * z) / 20
+#define f2(x,y,z)  (-18 - 3 * x + z) / 20
+#define f3(x,y,z)  (25 - 2 * x + 3 * y) / 20
 
 void solution()
 {
-    db x0=0, y0=0, z0=0, x1, y1, z1, e1, e2, e3, e;
-    int step=1;
+    db x0 = 0, y0 = 0, z0 = 0, x1, y1, z1, e1, e2, e3, e;
+    int step = 1;
 
-    cout<< setprecision(6)<< fixed;
+    cout << setprecision(6) << fixed;
 
     /* Reading tolerable error */
-    cout<<"Enter tolerable error: ";
-    cin>>e;
+    cout << "Enter tolerable error: ";
+    cin >> e;
 
-    cout<< endl<<"Count\tx\t\ty\t\tz"<< endl;
+    cout << endl << "Count\tx\t\ty\t\tz" << endl;
 
     do
     {
@@ -69,12 +69,12 @@ void solution()
         y1 = f2(x1,y0,z0);
         z1 = f3(x1,y1,z0);
 
-        cout<< step<<"\t"<< x1<<"\t"<< y1<<"\t"<< z1<< endl;
+        cout << step << "\t" << x1<< "\t"<< y1 << "\t" << z1 << endl;
 
         /* Error */
-        e1 = fabs(x0-x1);
-        e2 = fabs(y0-y1);
-        e3 = fabs(z0-z1);
+        e1 = fabs(x0 - x1);
+        e2 = fabs(y0 - y1);
+        e3 = fabs(z0 - z1);
 
         step++;
 
@@ -84,9 +84,9 @@ void solution()
         z0 = z1;
 
     }
-    while(e1>e && e2>e && e3>e);
+    while(e1 > e && e2 > e && e3 > e);
 
-    cout<< endl<<"Solution: x = "<< x1<<", y = "<< y1<<" and z = "<< z1;
+    cout << endl << "Solution: x = " << x1 << ", y = " << y1 << " and z = " << z1;
 }
 
 int main()
