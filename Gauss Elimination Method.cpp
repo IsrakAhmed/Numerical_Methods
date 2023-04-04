@@ -6,7 +6,7 @@
        (i)      Create Augmented Matrix from the equations.
        (ii)     Make all the elements zero below the main diagonal.
        (iii)    Apply Back Substitution Method
-       (iv)     Find the values of the coefficients
+       (iv)     Find the values of the unknowns
 
 ***/
 
